@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Este vagón no existe - MARTOCHA</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f1115'/><circle cx='50' cy='45' r='24' fill='%2300ff88'/><path d='M38 75h24M50 60v20' stroke='%23facc15' stroke-width='8' stroke-linecap='round'/></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-green': '#00FF88',
+                        'neon-yellow': '#FACC15',
+                        'street-black': '#090A0E',
+                        'street-dark': '#111319',
+                        'street-card': '#181A22',
+                        'street-border': '#272B38'
+                    },
+                    fontFamily: {
+                        anton: ['Anton', 'sans-serif'],
+                        space: ['Space Grotesk', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-street-black text-gray-200 font-space min-h-screen flex flex-col justify-between items-center px-4 selection:bg-neon-green selection:text-black">
+    <div class="h-2 w-full bg-gradient-to-r from-neon-green via-neon-yellow to-neon-green"></div>
+
+    <main class="text-center max-w-lg mx-auto my-auto py-12">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-street-card border border-red-500/30 text-red-400 text-xs font-bold uppercase tracking-widest mb-6">
+            <i class="fa-solid fa-triangle-exclamation"></i> Vía Cortada
+        </div>
+
+        <h1 class="font-anton text-8xl sm:text-9xl text-white tracking-tighter leading-none mb-2">
+            4<span class="text-neon-green">0</span>4
+        </h1>
+
+        <h2 class="font-anton text-2xl sm:text-3xl text-neon-yellow uppercase tracking-wider mb-4">
+            ESTE VAGÓN NO EXISTE O SE PASÓ DE ESTACIÓN
+        </h2>
+
+        <p class="text-gray-400 text-base mb-8">
+            Te bajaste en una parada que no está en el mapa. Volvé al andén principal para seguir escuchando las barras de Martocha.
+        </p>
+
+        <a href="/" class="inline-flex items-center gap-3 px-8 py-4 bg-neon-green text-black font-anton tracking-wider text-lg rounded-xl hover:bg-neon-yellow transition-all duration-300 transform hover:-translate-y-1 shadow-lg">
+            <i class="fa-solid fa-train-subway"></i>
+            <span>VOLVER AL ANDÉN (INICIO)</span>
+        </a>
+    </main>
+
+    <footer class="py-6 text-xs text-gray-600 text-center">
+        &copy; MARTOCHA (Über Rastafari). Todos los derechos reservados.
+    </footer>
+</body>
+</html>

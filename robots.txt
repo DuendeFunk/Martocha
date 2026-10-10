@@ -1,0 +1,6 @@
+# robots.txt para Martocha (Über Rastafari)
+User-agent: *
+Allow: /
+
+# Sitemap oficial
+Sitemap: https://martocha.com/sitemap.xml

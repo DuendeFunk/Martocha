@@ -1,0 +1,18 @@
+{
+  "name": "MARTOCHA | Über Rastafari",
+  "short_name": "Martocha",
+  "description": "Sitio web oficial de Martocha. Rap, freestyle argentino y barras underground.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090A0E",
+  "theme_color": "#00FF88",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f1115'/><circle cx='50' cy='45' r='24' fill='%2300ff88'/><path d='M38 75h24M50 60v20' stroke='%23facc15' stroke-width='8' stroke-linecap='round'/></svg>",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
