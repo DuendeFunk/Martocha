@@ -102,6 +102,21 @@
             transform: translateY(0);
         }
 
+        /* Adaptabilidad estricta para Instagram embed en móviles pequeños */
+        .instagram-media {
+            min-width: 0 !important;
+            max-width: 100% !important;
+            width: 100% !important;
+            margin: 0 auto !important;
+        }
+
+        /* Prevención total de desbordamiento horizontal en móviles */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
+        }
+
         /* Subrayado spray urbano */
         .spray-underline {
             position: relative;
@@ -206,20 +221,20 @@
                 </a>
             </nav>
 
-            <!-- Botón Hamburguesa Móvil -->
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-300 hover:text-neon-green focus:outline-none" aria-label="Abrir menú">
+            <!-- Botón Hamburguesa Móvil con Target Táctil Cómodo -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-300 hover:text-neon-green focus:outline-none p-2.5 rounded-lg active:bg-street-card" aria-label="Abrir menú">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
         </div>
 
         <!-- Menú Móvil Desplegable -->
         <div id="mobile-menu" class="hidden md:hidden bg-street-dark border-b border-street-border px-6 py-5 space-y-4">
-            <a href="#sobre-mi" class="block text-gray-200 hover:text-neon-green font-semibold" onclick="closeMenu()">Sobre Mí</a>
-            <a href="#musica" class="block text-gray-200 hover:text-neon-green font-semibold" onclick="closeMenu()">Música</a>
-            <a href="#shorts" class="block text-gray-200 hover:text-neon-green font-semibold" onclick="closeMenu()">Freestyle & Batallas</a>
+            <a href="#sobre-mi" class="block text-gray-200 hover:text-neon-green font-semibold py-1.5" onclick="closeMenu()">Sobre Mí</a>
+            <a href="#musica" class="block text-gray-200 hover:text-neon-green font-semibold py-1.5" onclick="closeMenu()">Música</a>
+            <a href="#shorts" class="block text-gray-200 hover:text-neon-green font-semibold py-1.5" onclick="closeMenu()">Freestyle & Batallas</a>
             <div class="pt-2">
                 <a href="https://www.youtube.com/@Martochau" target="_blank" rel="noopener noreferrer" 
-                   class="w-full text-center py-2.5 px-4 bg-neon-green text-black font-bold rounded-lg flex items-center justify-center gap-2 shadow-neon-g">
+                   class="w-full text-center py-3 px-4 bg-neon-green text-black font-bold rounded-lg flex items-center justify-center gap-2 shadow-neon-g">
                     <i class="fa-brands fa-youtube"></i> Escuchar en YouTube
                 </a>
             </div>
@@ -241,55 +256,57 @@
             </div>
 
             <div class="relative z-10 max-w-4xl mx-auto text-center reveal-element">
-                <!-- Badges de Identidad -->
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-street-card/90 border border-neon-green/30 backdrop-blur mb-6 shadow-neon-g">
-                    <span class="w-2.5 h-2.5 rounded-full bg-neon-green animate-ping"></span>
-                    <span class="text-xs uppercase tracking-widest text-neon-green font-bold">FMS Under • Freestyle Porteño • Vagon Sessions</span>
+                <!-- Badges de Identidad Responsivos -->
+                <div class="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-street-card/90 border border-neon-green/30 backdrop-blur mb-5 sm:mb-6 shadow-neon-g max-w-full">
+                    <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-neon-green animate-ping shrink-0"></span>
+                    <span class="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-neon-green font-bold truncate">
+                        FMS Under • Freestyle Porteño • Vagon Sessions
+                    </span>
                 </div>
 
-                <!-- Título Principal -->
-                <h1 class="font-anton text-6xl sm:text-8xl md:text-9xl tracking-tight text-white uppercase leading-none drop-shadow-2xl">
+                <!-- Título Principal con Escalado Óptimo para Móviles Pequeños -->
+                <h1 class="font-anton text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight text-white uppercase leading-none drop-shadow-2xl">
                     MARTO<span class="text-neon-green">CHA</span>
                 </h1>
 
-                <!-- Subtítulo -->
-                <h2 class="font-syne font-extrabold text-2xl sm:text-4xl md:text-5xl text-neon-yellow tracking-widest uppercase mt-2 mb-4">
+                <!-- Subtítulo Responsivo -->
+                <h2 class="font-syne font-extrabold text-xl sm:text-3xl md:text-4xl lg:text-5xl text-neon-yellow tracking-widest uppercase mt-2 mb-4">
                     ÜBER RASTAFARI
                 </h2>
 
                 <!-- Lema / Bajada -->
-                <p class="text-lg sm:text-2xl text-gray-300 font-medium max-w-2xl mx-auto mb-9 leading-relaxed">
+                <p class="text-base sm:text-xl md:text-2xl text-gray-300 font-medium max-w-2xl mx-auto mb-8 sm:mb-9 leading-relaxed px-2">
                     <span class="spray-underline text-white font-semibold">Barras, Subte y Freestyle Argentino</span>. 
                     El rap de trinchera que nace en la esquina, viaja al volante y detona en el vagón.
                 </p>
 
                 <!-- Botones CTA Principales -->
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 px-4 sm:px-0">
                     <a href="https://www.youtube.com/@Martochau" target="_blank" rel="noopener noreferrer" 
-                       class="w-full sm:w-auto px-8 py-4 bg-neon-green text-black font-anton tracking-wider text-xl rounded-xl hover:bg-neon-yellow transition-all duration-300 transform hover:-translate-y-1 shadow-neon-glow flex items-center justify-center gap-3">
-                        <i class="fa-brands fa-youtube text-2xl"></i>
+                       class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-neon-green text-black font-anton tracking-wider text-lg sm:text-xl rounded-xl hover:bg-neon-yellow transition-all duration-300 transform hover:-translate-y-1 shadow-neon-glow flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-youtube text-xl sm:text-2xl"></i>
                         <span>ESCUCHAR EN YOUTUBE</span>
                     </a>
                     <a href="#musica" 
-                       class="w-full sm:w-auto px-8 py-4 bg-street-card/90 border border-street-border hover:border-neon-green text-white font-anton tracking-wider text-xl rounded-xl hover:bg-street-dark transition-all duration-300 flex items-center justify-center gap-3">
+                       class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-street-card/90 border border-street-border hover:border-neon-green text-white font-anton tracking-wider text-lg sm:text-xl rounded-xl hover:bg-street-dark transition-all duration-300 flex items-center justify-center gap-3">
                         <i class="fa-solid fa-play text-neon-green"></i>
                         <span>ÚLTIMO LANZAMIENTO</span>
                     </a>
                 </div>
 
-                <!-- Métricas / Sellos Urbanos -->
-                <div class="grid grid-cols-3 gap-4 max-w-lg mx-auto mt-14 pt-8 border-t border-street-border/60 text-center">
+                <!-- Métricas / Sellos Urbanos Adaptados a Móviles -->
+                <div class="grid grid-cols-3 gap-2 sm:gap-4 max-w-lg mx-auto mt-10 sm:mt-14 pt-6 sm:pt-8 border-t border-street-border/60 text-center">
                     <div>
-                        <div class="text-2xl sm:text-3xl font-anton text-neon-green">+100K</div>
-                        <div class="text-xs uppercase text-gray-400 tracking-wider">Reproducciones Virales</div>
+                        <div class="text-xl sm:text-3xl font-anton text-neon-green">+100K</div>
+                        <div class="text-[10px] sm:text-xs uppercase text-gray-400 tracking-wider">Reproducciones</div>
                     </div>
                     <div>
-                        <div class="text-2xl sm:text-3xl font-anton text-neon-yellow">FMS Under</div>
-                        <div class="text-xs uppercase text-gray-400 tracking-wider">Competencia Real</div>
+                        <div class="text-xl sm:text-3xl font-anton text-neon-yellow">FMS Under</div>
+                        <div class="text-[10px] sm:text-xs uppercase text-gray-400 tracking-wider">Competencia</div>
                     </div>
                     <div>
-                        <div class="text-2xl sm:text-3xl font-anton text-neon-green">Línea B & D</div>
-                        <div class="text-xs uppercase text-gray-400 tracking-wider">Cultura Subte</div>
+                        <div class="text-xl sm:text-3xl font-anton text-neon-green">Línea B & D</div>
+                        <div class="text-[10px] sm:text-xs uppercase text-gray-400 tracking-wider">Cultura Subte</div>
                     </div>
                 </div>
             </div>
@@ -302,30 +319,50 @@
             <div class="max-w-6xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     
-                    <!-- Imagen / Columna Visual -->
-                    <div class="lg:col-span-5 reveal-element">
-                        <div class="relative mx-auto max-w-md">
-                            <!-- Marco Neón Estilo Afiche Callejero -->
-                            <div class="absolute -inset-2 bg-gradient-to-r from-neon-green to-neon-yellow rounded-2xl opacity-25 blur-lg"></div>
-                            <div class="relative bg-street-card rounded-2xl overflow-hidden border border-street-border p-3">
-                                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80" 
-                                     alt="Martocha rapeando con micrófono" 
-                                     class="w-full h-[430px] object-cover rounded-xl filter contrast-125">
+                    <!-- Reel Viral de Instagram / Columna Visual de Alta Prioridad -->
+                    <div class="lg:col-span-5 reveal-element flex justify-center">
+                        <div class="relative w-full max-w-[460px]">
+                            <!-- Marco Neón Estilo Afiche Callejero con Glow -->
+                            <div class="absolute -inset-2 bg-gradient-to-r from-pink-500 via-neon-yellow to-neon-green rounded-3xl opacity-30 blur-xl"></div>
+                            
+                            <div class="relative bg-street-card rounded-2xl overflow-hidden border border-street-border p-3 sm:p-4 shadow-2xl">
                                 
-                                <!-- Sticker Callejero Flotante -->
-                                <div class="absolute top-6 right-6 bg-street-black/95 text-neon-green px-3.5 py-1.5 rounded-lg border border-neon-green/40 font-anton tracking-wider text-sm shadow-xl transform rotate-3">
-                                    <i class="fa-solid fa-microphone-lines mr-1 text-neon-yellow"></i> 100% FREESTYLE
+                                <!-- Barra Superior de la Tarjeta Instagram -->
+                                <div class="flex items-center justify-between pb-3 mb-3 border-b border-street-border/80">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center text-white text-base shadow-sm">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center gap-1.5">
+                                                <span class="font-anton text-white text-base tracking-wider">@martocha__</span>
+                                                <i class="fa-solid fa-circle-check text-blue-400 text-xs" title="Perfil Oficial"></i>
+                                            </div>
+                                            <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block -mt-0.5">martin chavez</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="text-[10px] uppercase font-bold tracking-wider text-neon-green bg-emerald-500/10 px-2.5 py-1 rounded-full border border-neon-green/30">
+                                        <i class="fa-solid fa-bolt mr-1"></i> Reel Viral
+                                    </span>
                                 </div>
 
-                                <!-- Badge Chofer & Rasta -->
-                                <div class="absolute bottom-6 left-6 right-6 bg-street-black/90 backdrop-blur-md p-3.5 rounded-xl border border-street-border flex items-center justify-between">
-                                    <div>
-                                        <p class="text-xs text-gray-400 uppercase tracking-widest font-semibold">Alter Ego Oficial</p>
-                                        <p class="text-white font-anton text-lg tracking-wide text-neon-yellow">ÜBER RASTAFARI</p>
-                                    </div>
-                                    <span class="w-10 h-10 rounded-full bg-street-dark border border-neon-green/30 flex items-center justify-center text-neon-green text-lg">
-                                        <i class="fa-solid fa-car-side"></i>
+                                <!-- Contenedor del Embed de Instagram Oficial -->
+                                <div class="flex justify-center w-full overflow-hidden rounded-xl bg-street-dark/40 border border-street-border/40 py-2">
+                                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/Dd7iqlshEp4/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/Dd7iqlshEp4/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/Dd7iqlshEp4/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida por martin chavez (@martocha__)</a></p></div></blockquote>
+                                    <script async src="//www.instagram.com/embed.js"></script>
+                                </div>
+
+                                <!-- Pie de la Tarjeta con Enlace Rápido -->
+                                <div class="w-full mt-3 pt-2.5 border-t border-street-border/60 flex items-center justify-between text-xs px-1">
+                                    <span class="text-neon-yellow font-bold flex items-center gap-1.5">
+                                        <i class="fa-solid fa-car-side"></i> Über Rastafari
                                     </span>
+                                    <a href="https://www.instagram.com/reel/Dd7iqlshEp4/" target="_blank" rel="noopener noreferrer" 
+                                       class="text-neon-green hover:underline font-bold flex items-center gap-1.5 transition-colors">
+                                        <span>Ver en Instagram</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -427,16 +464,28 @@
                         </div>
 
                         <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
-                            <!-- Video Embed (Iframe Responsivo de YouTube) -->
+                            <!-- Video Embed (Iframe Responsivo de YouTube con Autoplay y Botón Desmutear) -->
                             <div class="lg:col-span-8 bg-black relative">
                                 <div class="relative w-full aspect-video">
                                     <iframe 
+                                        id="featured-video-player"
                                         class="absolute top-0 left-0 w-full h-full border-0"
-                                        src="https://www.youtube-nocookie.com/embed/videoseries?list=PL4o29bINVT4EG_y-k5jGoOu3-Am8Nvi10"
+                                        src="https://www.youtube.com/embed/6Y9qKhXRRI8?enablejsapi=1&autoplay=1&mute=1&playsinline=1&si=NXid_KAhZExfWqqw"
                                         title="ESTO NO SE ACABA - MARTOCHAxDINÁMICA"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        referrerpolicy="strict-origin-when-cross-origin"
                                         allowfullscreen>
                                     </iframe>
+
+                                    <!-- Botón Flotante para Desmutear sobre el Video -->
+                                    <div class="absolute bottom-4 left-4 z-20">
+                                        <button id="unmute-btn" type="button" 
+                                                class="px-4 py-2.5 bg-neon-green hover:bg-neon-yellow text-black font-anton tracking-wider text-sm rounded-xl shadow-neon-glow flex items-center gap-2.5 transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer border border-black/20"
+                                                title="Activar o silenciar sonido">
+                                            <i id="unmute-icon" class="fa-solid fa-volume-xmark text-base"></i>
+                                            <span id="unmute-text">DESMUTEAR</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
 
@@ -454,6 +503,13 @@
                                         Un corte visceral cargado de métricas afiladas, tempo enérgico y el contraste estilístico entre Martocha y Dinámica. Grabado para romper cualquier parlante.
                                     </p>
 
+                                    <!-- Control de Audio Secundario -->
+                                    <button id="sidebar-unmute-btn" type="button"
+                                            class="w-full mb-5 py-2.5 px-4 bg-street-dark border border-neon-green/40 hover:border-neon-green text-neon-green hover:bg-neon-green hover:text-black font-anton tracking-wider text-xs rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
+                                        <i class="fa-solid fa-volume-xmark" id="sidebar-unmute-icon"></i>
+                                        <span id="sidebar-unmute-text">DESMUTEAR AUDIO</span>
+                                    </button>
+
                                     <ul class="text-xs text-gray-400 space-y-2 mb-6">
                                         <li class="flex items-center gap-2">
                                             <i class="fa-solid fa-compact-disc text-neon-yellow"></i>
@@ -466,7 +522,7 @@
                                     </ul>
                                 </div>
 
-                                <a href="https://www.youtube.com/@Martochau" target="_blank" rel="noopener noreferrer" 
+                                <a href="https://www.youtube.com/watch?v=6Y9qKhXRRI8" target="_blank" rel="noopener noreferrer" 
                                    class="w-full py-3 px-4 bg-neon-green text-black font-anton tracking-wider text-center rounded-xl hover:bg-neon-yellow transition-colors flex items-center justify-center gap-2 shadow-neon-g">
                                     <i class="fa-brands fa-youtube text-lg"></i>
                                     <span>VER EN EL CANAL OFICIAL</span>
@@ -757,6 +813,90 @@
 
             const revealElements = document.querySelectorAll('.reveal-element');
             revealElements.forEach(el => revealObserver.observe(el));
+        });
+
+        // ==============================================
+        // REPRODUCTOR YOUTUBE: AUTOPLAY & BOTÓN DESMUTEAR
+        // ==============================================
+        let ytPlayer = null;
+        let isMuted = true;
+
+        // Carga dinámica de la API Iframe de YouTube
+        const ytScript = document.createElement('script');
+        ytScript.src = "https://www.youtube.com/iframe_api";
+        document.head.appendChild(ytScript);
+
+        window.onYouTubeIframeAPIReady = function() {
+            ytPlayer = new YT.Player('featured-video-player', {
+                events: {
+                    'onReady': (event) => {
+                        event.target.mute();
+                        event.target.playVideo();
+                    }
+                }
+            });
+        };
+
+        function toggleVideoMute() {
+            const iframe = document.getElementById('featured-video-player');
+            const unmuteBtnText = document.getElementById('unmute-text');
+            const unmuteBtnIcon = document.getElementById('unmute-icon');
+            const sidebarText = document.getElementById('sidebar-unmute-text');
+            const sidebarIcon = document.getElementById('sidebar-unmute-icon');
+
+            if (isMuted) {
+                // Desmutear audio
+                if (ytPlayer && typeof ytPlayer.unMute === 'function') {
+                    ytPlayer.unMute();
+                    ytPlayer.setVolume(100);
+                    ytPlayer.playVideo();
+                }
+                if (iframe && iframe.contentWindow) {
+                    iframe.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
+                    iframe.contentWindow.postMessage('{"event":"command","func":"setVolume","args":[100]}', '*');
+                    iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                }
+                isMuted = false;
+                if (unmuteBtnText) unmuteBtnText.textContent = 'MUTEAR';
+                if (unmuteBtnIcon) {
+                    unmuteBtnIcon.classList.remove('fa-volume-xmark');
+                    unmuteBtnIcon.classList.add('fa-volume-high');
+                }
+                if (sidebarText) sidebarText.textContent = 'MUTEAR AUDIO';
+                if (sidebarIcon) {
+                    sidebarIcon.classList.remove('fa-volume-xmark');
+                    sidebarIcon.classList.add('fa-volume-high');
+                }
+            } else {
+                // Mutear audio
+                if (ytPlayer && typeof ytPlayer.mute === 'function') {
+                    ytPlayer.mute();
+                }
+                if (iframe && iframe.contentWindow) {
+                    iframe.contentWindow.postMessage('{"event":"command","func":"mute","args":""}', '*');
+                }
+                isMuted = true;
+                if (unmuteBtnText) unmuteBtnText.textContent = 'DESMUTEAR';
+                if (unmuteBtnIcon) {
+                    unmuteBtnIcon.classList.remove('fa-volume-high');
+                    unmuteBtnIcon.classList.add('fa-volume-xmark');
+                }
+                if (sidebarText) sidebarText.textContent = 'DESMUTEAR AUDIO';
+                if (sidebarIcon) {
+                    sidebarIcon.classList.remove('fa-volume-high');
+                    sidebarIcon.classList.add('fa-volume-xmark');
+                }
+            }
+        }
+
+        document.getElementById('unmute-btn')?.addEventListener('click', toggleVideoMute);
+        document.getElementById('sidebar-unmute-btn')?.addEventListener('click', toggleVideoMute);
+
+        // Inicialización y procesamiento del embed de Instagram
+        window.addEventListener('load', () => {
+            if (window.instgrm && window.instgrm.Embeds) {
+                window.instgrm.Embeds.process();
+            }
         });
     </script>
 </body>
